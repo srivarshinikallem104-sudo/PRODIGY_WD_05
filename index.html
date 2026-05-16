@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad Live Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div class="header">
+            <div class="brand">
+                <i class="fa-solid fa-cloud-sun"></i> Weather App
+            </div>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="cityInput" placeholder="Search any city... (Press Enter)">
+            </div>
+            <button class="location-btn" id="locationBtn">
+                <i class="fa-solid fa-location-dot"></i> My Location
+            </button>
+        </div>
+
+        <div class="glass-panel current-weather">
+            <div class="left-info">
+                <div class="location-info">
+                    <h2 id="locationName"><i class="fa-solid fa-location-dot"></i>Hyderabad, India</h2>
+                    <p id="currentTime">Loading local time...</p>
+                </div>
+                <div class="weather-core">
+                    <i id="mainIcon" class="fa-solid fa-cloud"></i>
+                    <div class="temperature-block">
+                        <span class="temp" id="mainTemp">--°C</span>
+                        <span class="feels-like" id="feelsLike">Feels like --°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-desc-block">
+                <h3 id="weatherStatus">---</h3>
+                <p id="weatherSummary">---</p>
+            </div>
+
+            <div class="weather-metrics">
+                <div class="metric-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div class="metric-text">
+                        <span id="humidityVal">--%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="metric-item">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="metric-text">
+                        <span id="windVal">-- km/h</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+                <div class="metric-item">
+                    <i class="fa-solid fa-eye"></i>
+                    <div class="metric-text">
+                        <span id="visibilityVal">-- km</span>
+                        <p>Visibility</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-panel hourly-forecast">
+            <div class="section-title">
+                <i class="fa-regular fa-clock"></i> 24-Hour Forecast
+            </div>
+            <div class="hourly-scroll" id="hourlyWrapper">
+                </div>
+        </div>
+
+        <div class="bottom-row">
+            <div class="glass-panel details-grid">
+                <div class="detail-item">
+                    <i class="fa-solid fa-sun" style="color: #f1c40f;"></i>
+                    <span class="detail-label">Sunrise</span>
+                    <span class="detail-value" id="sunriseVal">--:--</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-moon" style="color: #e67e22;"></i>
+                    <span class="detail-label">Sunset</span>
+                    <span class="detail-value" id="sunsetVal">--:--</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-gauge-high" style="color: #3498db;"></i>
+                    <span class="detail-label">Pressure</span>
+                    <span class="detail-value" id="pressureVal">---- hPa</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-droplet" style="color: #2ecc71;"></i>
+                    <span class="detail-label">Humidity</span>
+                    <span class="detail-value" id="humidityVal2">--%</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-certificate" style="color: #e74c3c;"></i>
+                    <span class="detail-label">UV Index</span>
+                    <span class="detail-value" id="uvVal">--</span>
+                </div>
+            </div>
+
+            <div class="glass-panel daily-forecast">
+                <div class="section-title">5-Day Forecast</div>
+                <div class="daily-row" id="dailyWrapper">
+                     </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Stay ahead. Stay safe. <i class="fa-solid fa-heart"></i> | Weather updates for you.
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
